@@ -39,7 +39,7 @@ both of the the places will be marked with ";<========================" in the c
 
 ## **keybinds and timings**
 
-- for M1 and M2 to properly function you need to rebind them in adventure, __M1 => 3__ and __M2 => 4__.
+- for M1 and M2 to properly function you need to rebind them in adventure mode, __M1 => 3__ and __M2 => 4__.
 
 - if you wish to change auto loot, R, and T hold down times, youll find them marked at the top of the script (within a comment block of equal signs).
 
@@ -157,3 +157,4 @@ LoopWindows() {
 }
 
 ```
+
