@@ -4,7 +4,7 @@
 
 - this script requires AutoHotKey v2, it will not function on v1
 
-- despite the GUI, and the backend implying it supports multi account functionality, this script was edited to suit the needs of those with only 1 account. if you wish to add multi account functionality, the code will be at the bottom, ready to be pasted.
+- despite the GUI and the backend implying it supports multi account functionality, this script was edited to suit the needs of those with only 1 account. if you wish to add multi account functionality, the code will be at the bottom, ready to be pasted.
 
 - the script needs an account name to function, it can be whatever you like as long as its not the same as another account/blank. This is because the script uses the name of the client (which it renames to the account name) to send commands to. email and password can safely be left blank, theyre not required for this iteration of the script to run (but was a major hassle to remove them and didnt have the time to)
 
@@ -155,4 +155,5 @@ LoopWindows() {
         }
     }
 }
+
 ```
