@@ -1,4 +1,4 @@
-#Requires AutoHotkey v2.0
+6#Requires AutoHotkey v2.0
 
 DEBUG_MODE := false ; set to true for debugging
 OnError(DEBUG_MODE ? "" : (*) => False)  
@@ -731,6 +731,3 @@ AwaitActiveWindow(windowTitle) {
     }
     return true
 }
-
-; Script by Arachion
-
