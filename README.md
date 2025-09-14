@@ -2,11 +2,11 @@
 
 ## **IMPORTANT**
 
-- this script requires AutoHotKey v2, it will not function on v1
+- these scripts requires AutoHotKey v2, it will not function on v1
 
-- despite the GUI and the backend implying it supports multi account functionality, this script was edited to suit the needs of those with only 1 account. if you wish to add multi account functionality, the code will be at the bottom, ready to be pasted.
+- despite the GUI and the backend implying it supports multi account functionality, the stripped ahk was edited to suit the needs of those with only 1 account. if you wish to have multi account functionality, instead refer to the non stripped version
 
-- the script needs an account name to function, it can be whatever you like as long as its not the same as another account/blank. This is because the script uses the name of the client (which it renames to the account name) to send commands to. email and password can safely be left blank, theyre not required for this iteration of the script to run (but was a major hassle to remove them and didnt have the time to)
+- the script needs an account name to function, it can be whatever you like as long as its not the same as another account/blank. This is because the script uses the name of the client (which it renames to the account name) to send commands to. email and password are safely stored in a local file on your computer called settings.ini, theyre not required for the stripped iteration of the script to run (but was a major hassle to remove them and didnt have the time to)
 
 -the script does not currently support AZERTY keyboards but i might work on it if theres a demand for it.
 
@@ -55,106 +55,7 @@ both of the the places will be marked with ";<========================" in the c
 
 -I am by no means a good coder, so feel free to improve upon the script if you'd like.
 
-- if you happen to stumble upon my script and wish for multi account functionality, for those of you who are confident, just paste this block in over the current "LoopWindows" module. if youre not comfortable or dont know how to, feel free to reach out to me on Discord at "Arachion"
-```AHK
-LoopWindows() {
-    try {
-        global Settings, windowFirstStartStates, isWaited
-
-        for value in Settings {
-            if (value[13])
-                continue
-                
-            if (!WinExist(value[1])) {
-                try {
-                    PreviouslyActiveWindowTitle := WinGetTitle("A")
-                    if !PreviouslyActiveWindowTitle
-                        PreviouslyActiveWindowTitle := ""
-                } catch {
-                    PreviouslyActiveWindowTitle := ""
-                }
-                
-                if windowFirstStartStates.Has(value[1])
-                    windowFirstStartStates.Delete(value[1])
-                    
-                isWaited := 0
-                if (value[11]) {
-                    if WinExist("Trove - Error Handler") {
-                        WinActivate "Trove - Error Handler"
-                        Sleep 200
-                        ControlClick "Button2", "Trove - Error Handler"
-                    } else {
-                        WinActivate "Glyph"
-                        if !AwaitActiveWindow("Glyph") {
-                        }
-
-                        Sleep 100
-                        
-                        Click 978, 30
-                        Sleep 200  
-                        Click 962, 148
-                        Sleep 1000  
-                        
-                        WinActivate "Glyph Login"
-                        if !AwaitActiveWindow("Glyph Login") {
-                            return
-                        }
-                        Sleep 500  
-                        
-                        SendText value[2]
-                        Sleep 200  
-                        ControlSend "{tab}", , "Glyph"
-                        Sleep 200  
-                        SendText value[3]
-                        Sleep 500  
-                        Click 331, 425
-                        Sleep 1000  
-                        
-                        WinActivate "Glyph"
-                        if !AwaitActiveWindow("Glyph") {
-                            return
-                        }
-                        Sleep 100  
-                        
-                        Click 918, 101
-                        
-                        WinwaitActive("Trove")
-                        if !AwaitActiveWindow("Trove") {
-                            return
-                        }
-                        
-                        try {
-                            if WinExist("Trove") {
-                                WinSetTitle(value[1])
-                                Sleep 1000
-                                
-                                pid := GetWindowPID(value[1])
-                                if pid
-                                    ProcessMap[value[1]] := pid
-                                
-                                if (value[16] != 0) {
-                                    x := Integer(value[14])
-                                    y := Integer(value[15])
-                                    w := Integer(value[16])
-                                    h := Integer(value[17])
-                                    WinMove(x, y, w, h, value[1])
-                                } else {
-                                    WinMove(0, 0, 0, 0, value[1])
-                                }
-                            }
-                        }
-
-                        WinActivate(PreviouslyActiveWindowTitle)
-                    }
-                }
-            }
-        }
-    } catch Error as e {
-        if DEBUG_MODE {
-            throw Error(e.Message, e.What, e.Extra) 
-        }
-    }
-}
 
 ```
+
 
