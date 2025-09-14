@@ -41,7 +41,7 @@ both of the the places will be marked with ";<========================" in the c
 
 - for M1 and M2 to properly function you need to rebind them in adventure mode, __M1 => 3__ and __M2 => 4__.
 
-- if you wish to change auto loot, R, and T hold down times, youll find them marked at the top of the script (within a comment block of equal signs).
+- if you wish to change minimum sleep time between loops, auto loot, R and T hold down times, youll find them marked at the top of the script (within a comment block of equal signs).
 
 - FXDisable will start counting down the moment the script detects trove launches, so it needs ample delay. Generally 15000 milliseconds is more than enough, however if your pc is under strain or just generally slow, you may have to increase it accordingly.
 
@@ -54,5 +54,6 @@ both of the the places will be marked with ";<========================" in the c
 - this script is merely a passion project, if you wish to build on it feel free to do so, no credit required.
 
 -I am by no means a good coder, so feel free to improve upon the script if you'd like.
+
 
 
