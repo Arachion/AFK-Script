@@ -1,4 +1,4 @@
-# a couple things to note about this AFK Script
+# a couple things to note about this repo
 
 ## **IMPORTANT**
 
@@ -54,3 +54,4 @@ both of the the places will be marked with ";<========================" in the c
 - this script is merely a passion project, if you wish to build on it feel free to do so, no credit required.
 
 -I am by no means a good coder, so feel free to improve upon the script if you'd like.
+
