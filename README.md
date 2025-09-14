@@ -2,11 +2,11 @@
 
 ## **IMPORTANT**
 
-- these scripts requires AutoHotKey v2, it will not function on v1
+- these scripts requires AutoHotKey v2, they will not function on v1
 
 - despite the GUI and the backend implying it supports multi account functionality, the stripped ahk was edited to suit the needs of those with only 1 account. if you wish to have multi account functionality, instead refer to the non stripped version
 
-- the script needs an account name to function, it can be whatever you like as long as its not the same as another account/blank. This is because the script uses the name of the client (which it renames to the account name) to send commands to. email and password are safely stored in a local file on your computer called settings.ini, theyre not required for the stripped iteration of the script to run (but was a major hassle to remove them and didnt have the time to)
+- the script needs an account name to function, it can be whatever you like as long as its not the same as another account/blank (if you wish for the window to not relaunch trove if you have it running already, name the account "Trove"). This is because the script uses the name of the client (which it renames to the account name) to send commands to. email and password are safely stored in a local file on your computer called settings.ini, theyre not required for the stripped iteration of the script to run (but was a major hassle to remove them and didnt have the time to)
 
 -the script does not currently support AZERTY keyboards but i might work on it if theres a demand for it.
 
@@ -54,4 +54,5 @@ both of the the places will be marked with ";<========================" in the c
 - this script is merely a passion project, if you wish to build on it feel free to do so, no credit required.
 
 -I am by no means a good coder, so feel free to improve upon the script if you'd like.
+
 
